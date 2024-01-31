@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/message/messagestyle.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <!-- <link rel="stylesheet" href="assets/css/message/loading-bar.css"> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <title>Realtime Chat Application CI</title>
-</head>
-
+<?php include "includes/header.php"?>
 <body>
     <section id="main" class="bg-dark">
 
@@ -73,7 +56,7 @@
                     </div>
                     <div id="icons" class="px-4 pt-2">
                         <div id="send_mail">
-                            <a href="" id="mail_link"><i class="fas fa-envelope text-dark"></i></a>
+                            <a href="home.php" id="mail_link"><i class="fas fa-envelope text-dark"></i></a>
                         </div>
                         <div id="details_btn" class="ml-3">
                             <i  class="fas fa-info-circle text-dark"  ></i>
@@ -121,7 +104,9 @@
 
 <!-- block the user -->
 
-        <div id="details_of_user" styl="display: none">
+        <div id="details_of_user" 
+        styl="/display: none"
+        >
             <div id="user_details_container_avtar" style="background-size: 100% 100%; background-image: url('https://tripidkard.com/wp-content/uploads/2023/10/tripid-card-ver.-2-2.png');"></div>
             <h5 class="text-justify" id="details_of_name">Static Name</h5>
             <p class="text-justify" id="details_of_bio">Static Bio</p>
@@ -172,13 +157,8 @@
     </div> -->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script type="text/javascript" src="assets/js/message/main1.js">
-        
-    </script>
 </body>
+<?php include "includes/script.php"?>
 
 </html>
 <!-- 
@@ -244,7 +224,7 @@
 
 }
 
-</style> -->
+</style> 
 
 <style>
     /* Media query for mobile devices */
@@ -265,14 +245,36 @@
     position: absolute;
     top: 0;
     right: -60%; /* Initially set to -20% to hide it on the right side */
-    width: 60%;
+    width: 20%;
     height: 100%;
     background-color: #f0f0f0; /* Adjust color as needed */
     overflow: hidden;
     transition: right 0.3s ease; /* Add smooth transition */
-    display:none;
+}
+
+#chatbox {
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    background-color: #ffffff; /* Adjust color as needed */
+    overflow: hidden;
+    transition: width 0.3s ease; /* Add smooth transition */
 }
 
 
 }
+</style>-->
+<style>
+    @media (max-width: 576px) {
+        #details_of_user {
+            width: 60%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0; /* Set to 0, so initially it is hidden */
+            background-color: #f0f0f0; /* Adjust color as needed */
+            overflow: hidden;
+            transition: right 0.3s ease; /* Add smooth transition */
+
+        }
+    }
 </style>
